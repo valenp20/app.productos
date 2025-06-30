@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col s5">
+      <div class="card">
+        <div class="card-content">
+          <form #productoForm="ngForm" (ngSubmit)="agregarProducto(productoForm)">
+            <div class="row">
+              <div class="input-field col-s12">
+                <input type="text" name="nombre" #name="ngModel" [(ngModel)]="productosService.selectedProducto.nombre"
+                  placeholder="Ingrese el nombre del producto" required>
+              </div>
+              <div class="input-field col-s12">
+                <input type="text" name="descripcion" #description="ngModel"
+                  [(ngModel)]="productosService.selectedProducto.descripcion" placeholder="Ingrese la descripcion del producto">
+              </div>
+              <div class="input-field col-s12">
+                <input type="text" name="categoria" #category="ngModel" [(ngModel)]="productosService.selectedProducto.categoria"
+                  placeholder="Ingrese la categoria del producto">
+              </div>
+              <div class="input-field col-s12">
+                <input type="text" name="stock" #stock="ngModel" [(ngModel)]="productosService.selectedProducto.stock" placeholder="ingrese la cantidad de Productos">
+              </div>
+              <div class="card-action">
+                <div class="input-field col s12">
+                  <button class="btn right" type="button" (click)="resetForm(productoForm)">Limpiar</button>
+                  <button class="btn" type="submit">Guardar</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col s7">
+    </div>
+  </div>
+</div>
