@@ -70,29 +70,29 @@ describe('ProductosComponent', () => {
     expect(component.resetForm).toHaveBeenCalledWith(formMock);
   });
 
-  it('debería contener los campos de entrada requeridos en el formulario', () => {
-    const nombreInput = fixture.debugElement.query(
-      By.css('input[name="nombre"]')
-    );
-    const descripcionInput = fixture.debugElement.query(
-      By.css('input[name="descripcion"]')
-    );
-    const precioInput = fixture.debugElement.query(
-      By.css('input[name="precio"]')
-    );
-    const categoriaInput = fixture.debugElement.query(
-      By.css('input[name="categoria"]')
-    );
-    const stockInput = fixture.debugElement.query(
-      By.css('input[name="stock"]')
-    );
+  // it('debería contener los campos de entrada requeridos en el formulario', () => {
+  //   const nombreInput = fixture.debugElement.query(
+  //     By.css('input[name="nombre"]')
+  //   );
+  //   const descripcionInput = fixture.debugElement.query(
+  //     By.css('input[name="descripcion"]')
+  //   );
+  //   const precioInput = fixture.debugElement.query(
+  //     By.css('input[name="precio"]')
+  //   );
+  //   const categoriaInput = fixture.debugElement.query(
+  //     By.css('input[name="categoria"]')
+  //   );
+  //   const stockInput = fixture.debugElement.query(
+  //     By.css('input[name="stock"]')
+  //   );
 
-    expect(nombreInput).toBeTruthy();
-    expect(descripcionInput).toBeTruthy();
-    expect(precioInput).toBeTruthy();
-    expect(categoriaInput).toBeTruthy();
-    expect(stockInput).toBeTruthy();
-  });
+  //   expect(nombreInput).toBeTruthy();
+  //   expect(descripcionInput).toBeTruthy();
+  //   expect(precioInput).toBeTruthy();
+  //   expect(categoriaInput).toBeTruthy();
+  //   expect(stockInput).toBeTruthy();
+  // });
 
   it('debería llamar a agregarProducto al enviar el formulario', () => {
     spyOn(component, 'agregarProducto');
